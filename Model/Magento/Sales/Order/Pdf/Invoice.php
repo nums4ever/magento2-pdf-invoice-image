@@ -147,7 +147,7 @@ class Invoice extends \Magento\Sales\Model\Order\Pdf\Invoice
                         if(array_key_exists('is_image', $column) && !is_null($column['text'])){
                             $image = \Zend_Pdf_Image::imageWithPath($column['text']);
                             $feed = $column['feed'];
-                            $page->drawImage($image, $feed, $this->y, $feed+70, $this->y-80);
+                            $page->drawImage($image, $feed, $this->y-80, $feed+70, $this->y);
                             $maxHeight = 100;
                         }
                         continue 1;
